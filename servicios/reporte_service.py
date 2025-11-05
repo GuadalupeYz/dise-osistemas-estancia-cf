@@ -1,6 +1,5 @@
 """
 Servicio de Reportes - Generación automática de reportes
-Autor: Guadalupe Yañez
 
 Servicio concurrente que genera reportes periódicos del feedlot.
 """

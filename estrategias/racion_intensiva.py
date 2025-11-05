@@ -1,6 +1,5 @@
 """
 Estrategia de Ración Intensiva
-Autor: Guadalupe Yañez
 
 Estrategia de alimentación de alto rendimiento para engorde acelerado.
 """

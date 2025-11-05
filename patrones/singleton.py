@@ -1,6 +1,5 @@
 """
 Patrón Singleton - Garantiza una única instancia
-Autor: Guadalupe Yañez
 """
 
 import threading

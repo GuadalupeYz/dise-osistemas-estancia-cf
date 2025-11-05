@@ -1,6 +1,5 @@
 """
 Estrategia de Ración Normal
-Autor: Guadalupe Yañez
 
 Estrategia de alimentación estándar para animales en condiciones normales.
 """

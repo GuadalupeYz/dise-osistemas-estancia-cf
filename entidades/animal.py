@@ -1,6 +1,5 @@
 """
 Clase Animal - Representa un animal en el feedlot
-Autor: Guadalupe Yañez
 """
 
 from datetime import datetime

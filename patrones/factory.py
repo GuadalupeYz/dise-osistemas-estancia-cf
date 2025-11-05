@@ -1,6 +1,6 @@
 """
 Patrón Factory - Creación de objetos
-Autor: Guadalupe Yañez
+
 """
 
 from entidades.animal import Animal

@@ -1,6 +1,5 @@
 """
 Estrategia de Ración de Mantenimiento
-Autor: Guadalupe Yañez
 
 Estrategia de alimentación mínima para animales enfermos o en recuperación.
 """

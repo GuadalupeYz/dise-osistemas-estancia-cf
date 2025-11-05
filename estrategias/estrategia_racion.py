@@ -1,6 +1,5 @@
 """
 Patrón Strategy - Interfaz para estrategias de alimentación
-Autor: Guadalupe Yañez
 
 El patrón Strategy define una familia de algoritmos (estrategias de alimentación),
 los encapsula y los hace intercambiables. Permite que el algoritmo varíe

@@ -1,6 +1,5 @@
 """
 Clases Sensor - Sensores concurrentes para monitoreo
-Autor: Guadalupe Yañez
 Implementa: Patrón Observer + Threading
 """
 

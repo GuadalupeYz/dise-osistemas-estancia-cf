@@ -1,6 +1,5 @@
 """
 Servicio de Raciones - Aplica estrategias de alimentación
-Autor: Guadalupe Yañez
 
 Servicio concurrente que aplica estrategias de alimentación automáticamente.
 """

@@ -1,6 +1,5 @@
 """
 Clase Corral - Representa un corral que contiene animales
-Autor: Guadalupe Yañez
 """
 
 from typing import List, Optional

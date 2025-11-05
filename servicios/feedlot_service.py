@@ -1,6 +1,5 @@
 """
 Servicio Principal del Feedlot - Implementa Patrón Singleton
-Autor: Guadalupe Yañez
 
 Este es el corazón del sistema. Gestiona todo el feedlot de forma centralizada.
 """
