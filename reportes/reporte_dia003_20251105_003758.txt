@@ -1,0 +1,87 @@
+======================================================================
+ESTANCIA CARNES FINAS - REPORTE DÍA 3
+======================================================================
+
+Fecha: 2025-11-05 00:37:58
+Reporte #: 3
+
+ESTADÍSTICAS GENERALES
+----------------------------------------------------------------------
+Total animales: 5
+Peso promedio: 291.18 kg
+Peso total: 1455.92 kg
+Ganancia promedio: 9.18 kg
+Ganancia total: 45.92 kg
+GDP (Ganancia Diaria Promedio): 3.06 kg/día
+Animales enfermos: 0 (0.0%)
+Corrales: 2
+Alertas: 14
+
+TOP 3 ANIMALES (Mayor ganancia)
+----------------------------------------------------------------------
+1. Animal #5 (Ternero) - Ganancia: +14.51 kg - GDP: 4.84 kg/día
+2. Animal #1 (Ternero) - Ganancia: +12.33 kg - GDP: 4.11 kg/día
+3. Animal #4 (Toro) - Ganancia: +8.39 kg - GDP: 2.80 kg/día
+
+DETALLE POR ANIMAL
+----------------------------------------------------------------------
+Animal #1 (Ternero)
+  Peso actual: 192.33 kg
+  Peso inicial: 180.00 kg
+  Ganancia total: +12.33 kg
+  GDP: 4.11 kg/día
+  Temperatura: 38.1°C
+  Estado: Saludable
+  Ración: Intensiva
+
+Animal #2 (Novillo)
+  Peso actual: 285.88 kg
+  Peso inicial: 280.00 kg
+  Ganancia total: +5.88 kg
+  GDP: 1.96 kg/día
+  Temperatura: 38.5°C
+  Estado: Saludable
+  Ración: Mantenimiento
+
+Animal #3 (Novillo)
+  Peso actual: 304.81 kg
+  Peso inicial: 300.00 kg
+  Ganancia total: +4.81 kg
+  GDP: 1.60 kg/día
+  Temperatura: 39.3°C
+  Estado: Saludable
+  Ración: Mantenimiento
+
+Animal #4 (Toro)
+  Peso actual: 458.39 kg
+  Peso inicial: 450.00 kg
+  Ganancia total: +8.39 kg
+  GDP: 2.80 kg/día
+  Temperatura: 39.4°C
+  Estado: Saludable
+  Ración: Mantenimiento
+
+Animal #5 (Ternero)
+  Peso actual: 214.51 kg
+  Peso inicial: 200.00 kg
+  Ganancia total: +14.51 kg
+  GDP: 4.84 kg/día
+  Temperatura: 39.4°C
+  Estado: Saludable
+  Ración: Intensiva
+
+RESUMEN DE ALERTAS
+----------------------------------------------------------------------
+
+ RESUMEN DE ALERTAS (Total: 14)
+--------------------------------------------------
+• BAJO_RENDIMIENTO: 2 alerta(s)
+• FIEBRE: 12 alerta(s)
+
+Animales con más alertas:
+  Animal #4: 4 alerta(s)
+  Animal #2: 3 alerta(s)
+  Animal #3: 3 alerta(s)
+
+======================================================================
+Fin del reporte

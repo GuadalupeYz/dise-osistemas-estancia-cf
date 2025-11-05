@@ -1,0 +1,27 @@
+======================================================================
+ESTANCIA CARNES FINAS - REPORTE FINAL
+======================================================================
+
+Fecha: 2025-11-05 00:23:31
+Días de operación: 5
+Reportes generados: 5
+
+RESUMEN EJECUTIVO
+----------------------------------------------------------------------
+Total animales: 5
+Ganancia total: 94.51 kg
+Peso final promedio: 300.90 kg
+GDP General: 3.78 kg/día
+Tasa de enfermedad: 20.0%
+Total alertas: 35
+
+TOP 5 MEJORES ANIMALES
+----------------------------------------------------------------------
+1. Animal #2 (Novillo) - Ganancia: +25.12 kg (GDP: 5.02 kg/día)
+2. Animal #5 (Ternero) - Ganancia: +24.70 kg (GDP: 4.94 kg/día)
+3. Animal #1 (Ternero) - Ganancia: +23.50 kg (GDP: 4.70 kg/día)
+4. Animal #3 (Novillo) - Ganancia: +10.61 kg (GDP: 2.12 kg/día)
+5. Animal #4 (Toro) - Ganancia: +10.59 kg (GDP: 2.12 kg/día)
+
+======================================================================
+Fin del reporte final

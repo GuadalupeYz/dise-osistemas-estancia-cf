@@ -1,0 +1,391 @@
+Estancia Carnes Finas - Sistema Completo de Gestión de Feedlot
+
+Sistema automatizado profesional de gestión de engorde de ganado desarrollado en Python, 
+implementando patrones de diseño avanzados, programación concurrente y módulos empresariales.
+
+##  Descripción
+
+**Estancia Carnes Finas v2.0** es un sistema completo que simula la gestión inteligente de un feedlot,
+ahora con módulos avanzados similares a sistemas empresariales:
+
+###  Funcionalidades Principales
+
+-  **Monitoreo continuo** de peso y temperatura
+-  **Detección automática** de alertas de salud
+-  **Estrategias de alimentación** configurables
+-  **Reportes automáticos** diarios
+-  **Persistencia de datos** (guardar/cargar estado)
+-  **Sistema de logging** completo
+-  **Observador de salud** con acciones automáticas
+-  **Módulo veterinario** profesional
+
+## Novedades Versión 2.0
+
+### Persistencia de Datos
+- Guardar estado completo del sistema (`.dat`)
+- Cargar simulaciones anteriores
+- Exportar reportes en CSV
+- Backups automáticos
+- Exportar histórico de animales
+
+### Sistema de Logging
+- Bitácora completa de eventos
+- Niveles: DEBUG, INFO, WARNING, ERROR, CRITICO, ALERTA
+- Trazabilidad total del sistema
+- Archivos `.log` por sesión
+
+### Observador de Salud Avanzado
+- Monitoreo médico continuo
+- Acciones automáticas ante alertas
+- Registro de tratamientos
+- Gestión de animales en tratamiento
+- Informes veterinarios
+
+### Módulo Veterinario
+- Revisión completa de animales
+- Diagnósticos detallados
+- Aplicación de tratamientos
+- Alta médica
+- Historial de atenciones
+
+## Arquitectura del Sistema
+
+### Patrones de Diseño
+
+| **Singleton** | Sistema único de feedlot | `servicios/feedlot_service.py` |
+| **Factory** | Creación de animales y sensores | `patrones/factory.py` |
+| **Observer** | Sistema de alertas (2 observadores) | `patrones/observer.py`, `patrones/salud_observer.py` |
+| **Strategy** | Estrategias de alimentación | `estrategias/` |
+
+### Programación Concurrente
+
+-  **Sensores** : Hilos independientes para peso y temperatura
+-  **Raciones** : Aplicación automática de estrategias
+-  **Reportes** : Generación periódica de informes
+- **Thread-safe** : Sincronización con locks
+
+##  Estructura del Proyecto
+
+```
+python_feedlot/
+│
+├── entidades/
+│   ├── __init__.py
+│   ├── animal.py              # Clase Animal
+│   ├── corral.py              # Gestión de corrales
+│   ├── sensor.py              # Sensores concurrentes
+│   └── veterinario.py         #  Profesional veterinario
+│
+├── servicios/
+│   ├── __init__.py
+│   ├── feedlot_service.py     # Sistema principal (Singleton)
+│   ├── racion_service.py      # Servicio de raciones
+│   ├── reporte_service.py     # Generación de reportes
+│   ├── persistencia_service.py # Persistencia de datos
+│   └── log_service.py          # Sistema de logging
+│
+├── estrategias/
+│   ├── __init__.py
+│   ├── estrategia_racion.py   # Interfaz Strategy
+│   ├── racion_normal.py       # +1.0 kg/día
+│   ├── racion_intensiva.py    # +2.0 kg/día
+│   └── racion_mantenimiento.py # +0.3 kg/día
+│
+├── patrones/
+│   ├── __init__.py
+│   ├── singleton.py           # Metaclase Singleton
+│   ├── factory.py             # Factory de objetos
+│   ├── observer.py            # Observer básico
+│   └── salud_observer.py      # Observer de salud avanzado
+│
+├── reportes/                  # Reportes .txt generados
+├── reportes_csv/              #  Exportaciones CSV
+├── data/                      #  Estados guardados (.dat)
+│   └── backups/               #  Backups automáticos
+├── logs/                      #  Archivos de log
+│
+├── main.py                    # Programa principal
+└── README.md                  # Este archivo
+
+
+### Ejecución
+python3 main.py
+
+**Menú Principal:**
+
+1.  Simulación rápida (30s)
+2.  Simulación estándar (60s)
+3. Simulación extendida (120s)
+4. Configuración personalizada
+5. Continuar simulación anterior     
+6. Ver archivos guardados           
+7. Información de patrones
+8. Salir
+
+# Simulación de 60 segundos
+python3 main.py 60
+
+# Simulación de 120 segundos
+python3 main.py 120
+
+
+## Ejemplo de Salida
+
+======================================================================
+🐄          ESTANCIA CARNES FINAS          🐄
+    Sistema Inteligente de Gestión de Feedlot
+======================================================================
+Ubicación: Mendoza, Argentina
+Desarrollado por: Guadalupe Yañez
+Calidad Premium en Engorde de Ganado
+Versión 2.0 - Con módulos avanzados
+======================================================================
+
+PATRONES DE DISEÑO:
+----------------------------------------------------------------------
+✓ Singleton: FeedlotSystem (instancia única)
+✓ Factory: AnimalFactory (creación automática)
+✓ Observer: SaludObserver + ObservadorAlerta (notificaciones)
+✓ Strategy: Raciones (Normal, Intensiva, Mantenimiento)
+----------------------------------------------------------------------
+MÓDULOS AVANZADOS:
+----------------------------------------------------------------------
+✓ Persistencia: Guardar/Cargar estado (.dat)
+✓ Logging: Bitácora completa de eventos
+✓ Salud: Observador médico con acciones automáticas
+✓ Veterinario: Profesional con diagnósticos
+----------------------------------------------------------------------
+
+Inicializando servicios avanzados...
+Carpeta 'data/' creada
+Servicio de Persistencia configurado
+Servicio de Log configurado: logs/feedlot_20250102_143022.log
+
+CONFIGURANDO FEEDLOT...
+----------------------------------------------------------------------
+[FACTORY] ✓ Creado Ternero #1 (peso inicial: 180.0 kg)
+...
+Observador de Salud activado
+Veterinario Dra. María González (Mat. MP-8745) incorporado al equipo
+
+[SensorPeso] Animal #1 (Ternero) → +1.23 kg (Total: 181.23 kg)
+
+======================================================================
+ALERTA [FIEBRE] - 14:30:45
+Animal: #2 (Novillo)
+Mensaje: Fiebre detectada en Animal #2: 39.7°C
+Estado: Peso 281.5 kg | Temp 39.7°C | Salud: Enfermo - Fiebre
+======================================================================
+
+ [SALUD] Protocolo de fiebre activado para Animal #2
+Separando Animal #2 (Novillo) del lote principal
+Administrando antipirético
+Reforzando hidratación
+
+[VETERINARIO] Ronda médica...
+[VET. Dra. María González] Revisando Animal #2 (Novillo)
+Diagnóstico: Alerta - Fiebre moderada
+Temperatura: 39.7°C - ELEVADA
+Recomendaciones:
+  • Administrar antipirético
+  • Monitoreo cada 4 horas
+
+Creando backup automático...
+[PERSISTENCIA] ✓ Estado guardado en: data/backups/backup_20250102_143522.dat
+
+REPORTE DIARIO - DÍA 1
+======================================================================
+...
+
+Guardando estado final...
+[PERSISTENCIA] ✓ Estado guardado en: data/feedlot_20250102_143800.dat
+[PERSISTENCIA] ✓ Reporte CSV exportado: reportes_csv/feedlot_2025-01-02.csv
+Log finalizado: logs/feedlot_20250102_143022.log
+
+======================================================================
+SIMULACIÓN FINALIZADA
+======================================================================
+Archivos generados:
+   • Reportes: ./reportes/
+   • CSV: ./reportes_csv/
+   • Estados: ./data/
+   • Logs: ./logs/
+======================================================================
+
+
+## Características Avanzadas
+
+### Persistencia de Datos
+
+# En main.py - Opción 5: Continuar simulación anterior
+ejecutar_simulacion(60, continuar=True)
+
+**Archivos generados:**
+- `data/feedlot_YYYYMMDD_HHMMSS.dat` - Estado completo
+- `data/backups/backup_*.dat` - Backups automáticos
+- `reportes_csv/feedlot_YYYY-MM-DD.csv` - Datos en CSV
+- `reportes_csv/historico_*.csv` - Histórico de lecturas
+
+### Sistema de Logging
+
+Cada sesión genera un archivo `.log` con:
+- `[INFO]` - Eventos informativos
+- `[DEBUG]` - Detalles de depuración
+- `[WARNING]` - Advertencias
+- `[ERROR]` - Errores
+- `[ALERTA]` - Alertas del sistema
+- `[OK]` - Operaciones exitosas
+- `[PERSISTENCIA]` - Operaciones de guardado
+
+### Observador de Salud
+
+Toma acciones automáticas:
+- **Fiebre (≥39.5°C)**: Separación, antipirético, hidratación
+- **Hipotermia (<37°C)**: Abrigo, alimento calórico
+- **Bajo rendimiento**: Revisión nutricional
+
+### Módulo Veterinario
+
+Funcionalidades:
+- `revisar_animal()` - Diagnóstico completo
+- `aplicar_tratamiento()` - Tratamientos disponibles
+- `dar_alta()` - Alta médica
+- `generar_informe_medico()` - Informe detallado
+
+**Tratamientos disponibles:**
+- Antipirético
+- Antibiótico
+- Antiparasitario
+- Complejo vitamínico
+
+## Métricas del Sistema
+
+### Indicadores Monitoreados
+- **Peso promedio** y total
+- **Ganancia Diaria Promedio (GDP)** por animal
+- **Temperatura** corporal
+- **Estado de salud** (5 estados posibles)
+- **Alertas** por tipo y animal
+- **Tratamientos** activos
+- **Rendimiento** por estrategia de alimentación
+
+### Reportes Generados
+1. **Reportes diarios** (.txt) - Cada 15 segundos simulados
+2. **Reporte final** (.txt) - Al terminar
+3. **Exportación CSV** - Datos tabulados
+4. **Histórico CSV** - Serie temporal completa
+5. **Logs** - Bitácora de eventos
+6. **Informe veterinario** - Análisis de salud
+
+## Configuración Avanzada
+
+### Modificar Intervalos
+
+```python
+# En main.py -> configurar_feedlot()
+animal, sensor_peso, sensor_temp = AnimalFactory.crear_animal_completo(
+    id_animal, tipo, peso,
+    intervalo_peso=5.0,  # Cambiar intervalo de peso
+    intervalo_temp=3.0   # Cambiar intervalo de temperatura
+)
+```
+
+### Crear Nueva Estrategia
+
+```python
+# En estrategias/racion_personalizada.py
+from estrategias.estrategia_racion import EstrategiaRacion
+
+class RacionPersonalizada(EstrategiaRacion):
+    def aplicar_racion(self, animal) -> float:
+        incremento = 1.5  # kg/día
+        animal.actualizar_peso(incremento)
+        return incremento
+    
+    def obtener_nombre(self) -> str:
+        return "Ración Personalizada"
+```
+
+### Agregar Nuevo Tratamiento
+
+```python
+# En entidades/veterinario.py -> aplicar_tratamiento()
+tratamientos_disponibles = {
+    'nuevo_tratamiento': {
+        'nombre': 'Nombre del tratamiento',
+        'indicacion': 'Para qué se usa',
+        'dosis': 'Dosis recomendada'
+    }
+}
+```
+
+## Historias de Usuario
+
+- **US-001**: Registro de animales y corrales
+- **US-002**: Simulación de sensores
+- **US-003**: Alertas automáticas
+- **US-004**: Estrategias de alimentación
+- **US-005**: Reportes automáticos
+- **US-006**: Persistencia de datos ← **NUEVO**
+- **US-007**: Sistema de logging ← **NUEVO**
+- **US-008**: Acciones automáticas de salud ← **NUEVO**
+- **US-009**: Atención veterinaria ← **NUEVO**
+
+## Autor
+
+**Guadalupe Yañez**
+- Proyecto académico - POO Avanzada
+- Mendoza, Argentina
+- Diseño de Sistemas - 2025
+
+## Licencia
+
+Este proyecto es de código abierto bajo licencia MIT.
+
+## Agradecimientos
+
+- Inspirado en sistemas reales de gestión ganadera
+- Basado en arquitecturas empresariales profesionales
+- Tecnologías: Python 3.12, Threading, OOP, Design Patterns
+
+## Roadmap Futuro
+
+- [ ] Interfaz gráfica (GUI) con tkinter/PyQt
+- [ ] Base de datos SQL para persistencia avanzada
+- [ ] API REST para integración externa
+- [ ] Dashboard web en tiempo real
+- [ ] Machine Learning para predicciones
+- [ ] Integración con sensores IoT reales
+- [ ] App móvil para monitoreo remoto
+- [ ] Sistema de usuarios y roles
+
+## Documentación Adicional
+
+### Archivos de Configuración
+
+Todas las configuraciones están en constantes dentro de los archivos:
+- Intervalos de sensores: `main.py`
+- Pesos iniciales por tipo: `patrones/factory.py`
+- Costos de raciones: archivos en `estrategias/`
+- Tratamientos disponibles: `entidades/veterinario.py`
+
+### Estructura de Datos
+
+**Estado guardado** (.dat):
+```python
+{
+    'animales': Dict[int, Animal],
+    'corrales': Dict[int, Corral],
+    'dia_actual': int,
+    'fecha_inicio': datetime,
+    'alertas': List[Dict],
+    'timestamp_guardado': datetime
+}
+```
+
+**Registro de log**:
+```
+[HH:MM:SS.mmm] [NIVEL] Mensaje
+```
+
+**¡Gracias por usar Estancia Carnes Finas v2.0!** 
