@@ -1,7 +1,7 @@
 """
 Archivo integrador generado automaticamente
 Directorio: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./estrategias
-Fecha: 2025-11-05 09:19:07
+Fecha: 2025-11-05 20:04:58
 Total de archivos integrados: 5
 """
 

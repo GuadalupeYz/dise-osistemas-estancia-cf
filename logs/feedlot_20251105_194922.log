@@ -1,0 +1,59 @@
+================================================================================
+ESTANCIA CARNES FINAS - BITÁCORA DE EVENTOS
+================================================================================
+Inicio de sesión: 2025-11-05 19:49:22
+================================================================================
+
+[19:49:22.744] [OK] Sistema iniciado
+
+--------------------------------------------------------------------------------
+  CONFIGURACIÓN DEL FEEDLOT
+--------------------------------------------------------------------------------
+
+[19:49:22.745] [INFO] Animal 1 (Ternero) creado - Peso: 180.0 kg
+[19:49:22.745] [INFO] Animal 2 (Novillo) creado - Peso: 280.0 kg
+[19:49:22.746] [INFO] Animal 3 (Novillo) creado - Peso: 300.0 kg
+[19:49:22.746] [INFO] Animal 4 (Toro) creado - Peso: 450.0 kg
+[19:49:22.746] [INFO] Animal 5 (Ternero) creado - Peso: 200.0 kg
+[19:49:22.747] [INFO] Veterinario Dra. María González incorporado
+[19:49:22.747] [INFO] Estrategias de alimentación configuradas
+[19:49:22.751] [ALERTA] ALERTA FIEBRE - Animal #2 (Novillo): 39.68821128616504
+[19:49:22.751] [OK] Tratamiento de fiebre iniciado - Animal #2
+[19:49:22.758] [ALERTA] ALERTA FIEBRE - Animal #4 (Toro): 39.52879147611544
+[19:49:22.759] [OK] Tratamiento de fiebre iniciado - Animal #4
+[19:49:22.760] [OK] Sistema iniciado - 5 animales, 10 sensores
+[19:49:28.753] [ALERTA] ALERTA FIEBRE - Animal #3 (Novillo): 39.634932899697844
+[19:49:28.753] [OK] Tratamiento de fiebre iniciado - Animal #3
+[19:49:30.756] [ALERTA] ALERTA BAJO_RENDIMIENTO - Animal #4 (Toro): 38.209510798869466
+[19:49:30.757] [WARNING] Bajo rendimiento detectado - Animal #4
+[19:49:30.757] [WARNING] Cambio de estado - Animal #4: Saludable → Bajo observación
+[19:49:30.758] [ALERTA] ALERTA BAJO_RENDIMIENTO - Animal #5 (Ternero): 38.40034389967327
+[19:49:30.760] [WARNING] Bajo rendimiento detectado - Animal #5
+[19:49:30.761] [WARNING] Cambio de estado - Animal #5: Saludable → Bajo observación
+[19:49:34.757] [ALERTA] ALERTA FIEBRE - Animal #5 (Ternero): 39.55435542029296
+[19:49:34.758] [OK] Tratamiento de fiebre iniciado - Animal #5
+[19:49:40.750] [ALERTA] ALERTA FIEBRE - Animal #1 (Ternero): 39.81811466028656
+[19:49:40.751] [OK] Tratamiento de fiebre iniciado - Animal #1
+[19:49:40.761] [ALERTA] ALERTA FIEBRE - Animal #5 (Ternero): 39.992545850769375
+[19:49:40.762] [OK] Tratamiento de fiebre iniciado - Animal #5
+[19:49:46.750] [ALERTA] ALERTA BAJO_RENDIMIENTO - Animal #1 (Ternero): 39.81811466028656
+[19:49:46.750] [WARNING] Bajo rendimiento detectado - Animal #1
+[19:49:46.754] [ALERTA] ALERTA FIEBRE - Animal #2 (Novillo): 39.976049272279056
+[19:49:46.754] [OK] Tratamiento de fiebre iniciado - Animal #2
+[19:49:46.755] [ALERTA] ALERTA FIEBRE - Animal #3 (Novillo): 39.7146392832159
+[19:49:46.755] [OK] Tratamiento de fiebre iniciado - Animal #3
+[19:49:46.762] [ALERTA] ALERTA FIEBRE - Animal #5 (Ternero): 39.80863248110593
+[19:49:46.763] [OK] Tratamiento de fiebre iniciado - Animal #5
+[19:49:52.755] [ALERTA] ALERTA FIEBRE - Animal #2 (Novillo): 39.5916689635057
+[19:49:52.756] [OK] Tratamiento de fiebre iniciado - Animal #2
+[19:49:52.768] [OK] Simulación completada - 30s
+[19:49:54.751] [ALERTA] ALERTA BAJO_RENDIMIENTO - Animal #2 (Novillo): 39.5916689635057
+[19:49:54.752] [WARNING] Bajo rendimiento detectado - Animal #2
+[19:49:54.753] [ALERTA] ALERTA BAJO_RENDIMIENTO - Animal #3 (Novillo): 38.321249952380704
+[19:49:54.753] [WARNING] Bajo rendimiento detectado - Animal #3
+[19:49:54.753] [WARNING] Cambio de estado - Animal #3: Saludable → Bajo observación
+[19:50:13.765] [OK] Sistema detenido - Día 3, Ganancia total: 57.02 kg
+
+================================================================================
+Fin de sesión: 2025-11-05 19:50:13
+================================================================================

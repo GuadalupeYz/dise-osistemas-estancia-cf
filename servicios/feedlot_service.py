@@ -13,6 +13,10 @@ from patrones.observer import ObservadorAlerta
 from estrategias.estrategia_racion import EstrategiaRacion
 from estrategias.racion_normal import RacionNormal
 import time
+from excepciones.feedlot_exceptions import (
+    AnimalNoEncontradoException,
+    CorralLlenoException
+)
 
 class FeedlotSystem(metaclass=SingletonMeta):
     """
@@ -67,28 +71,20 @@ class FeedlotSystem(metaclass=SingletonMeta):
         Returns:
             bool: True si se agregó exitosamente
         """
-        # Verificar que el animal no exista
+    
         if animal.id in self.animales:
-            print(f" Animal #{animal.id} ya existe en el sistema")
-            return False
-        
-        # Agregar a la colección de animales
+           raise AnimalNoEncontradoException(f"Animal #{animal.id} ya existe en el sistema")
+    
         self.animales[animal.id] = animal
-        
-        # Crear corral si no existe
+    
         if numero_corral not in self.corrales:
-            self.corrales[numero_corral] = Corral(numero_corral)
-            print(f"✓ Corral #{numero_corral} creado")
-        
-        # Agregar animal al corral
+           self.corrales[numero_corral] = Corral(numero_corral)
+  
         if self.corrales[numero_corral].agregar_animal(animal):
-            print(f"✓ {animal} agregado al {self.corrales[numero_corral]}")
-            return True
+           print(f"✓ {animal} agregado al {self.corrales[numero_corral]}")
+           return True
         else:
-            print(f"✗ Error: {self.corrales[numero_corral]} está lleno")
-            # Remover de la colección si no se pudo agregar al corral
-            del self.animales[animal.id]
-            return False
+            raise CorralLlenoException(f"{self.corrales[numero_corral]} está lleno")
     
     def remover_animal(self, id_animal: int) -> bool:
         """
@@ -359,3 +355,4 @@ class FeedlotSystem(metaclass=SingletonMeta):
                 f"corrales={len(self.corrales)}, "
                 f"sensores={len(self.sensores)}, "
                 f"activo={self.activo})")
+    

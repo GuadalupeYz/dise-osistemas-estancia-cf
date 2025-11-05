@@ -7,6 +7,7 @@ from entidades.animal import Animal
 from entidades.sensor import SensorPeso, SensorTemperatura
 from typing import Tuple, List
 import random
+from excepciones.feedlot_exceptions import FeedlotException
 
 class AnimalFactory:
     """
@@ -42,10 +43,7 @@ class AnimalFactory:
         """
         if tipo not in AnimalFactory.TIPOS_CONFIG:
             tipos_validos = ", ".join(AnimalFactory.TIPOS_CONFIG.keys())
-            raise ValueError(
-                f"Tipo de animal no válido: '{tipo}'. "
-                f"Tipos válidos: {tipos_validos}"
-            )
+            raise FeedlotException(f"Tipo de animal no válido: '{tipo}'. Tipos válidos: {tipos_validos}")
         
         # Si no se especifica peso, usar valor aleatorio del rango
         if peso_inicial is None:

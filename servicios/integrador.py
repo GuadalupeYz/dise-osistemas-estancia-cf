@@ -1,7 +1,7 @@
 """
 Archivo integrador generado automaticamente
 Directorio: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./servicios
-Fecha: 2025-11-05 09:19:07
+Fecha: 2025-11-05 20:04:58
 Total de archivos integrados: 6
 """
 
@@ -32,6 +32,10 @@ from patrones.observer import ObservadorAlerta
 from estrategias.estrategia_racion import EstrategiaRacion
 from estrategias.racion_normal import RacionNormal
 import time
+from excepciones.feedlot_exceptions import (
+    AnimalNoEncontradoException,
+    CorralLlenoException
+)
 
 class FeedlotSystem(metaclass=SingletonMeta):
     """
@@ -86,28 +90,20 @@ class FeedlotSystem(metaclass=SingletonMeta):
         Returns:
             bool: True si se agregó exitosamente
         """
-        # Verificar que el animal no exista
+    
         if animal.id in self.animales:
-            print(f" Animal #{animal.id} ya existe en el sistema")
-            return False
-        
-        # Agregar a la colección de animales
+           raise AnimalNoEncontradoException(f"Animal #{animal.id} ya existe en el sistema")
+    
         self.animales[animal.id] = animal
-        
-        # Crear corral si no existe
+    
         if numero_corral not in self.corrales:
-            self.corrales[numero_corral] = Corral(numero_corral)
-            print(f"✓ Corral #{numero_corral} creado")
-        
-        # Agregar animal al corral
+           self.corrales[numero_corral] = Corral(numero_corral)
+  
         if self.corrales[numero_corral].agregar_animal(animal):
-            print(f"✓ {animal} agregado al {self.corrales[numero_corral]}")
-            return True
+           print(f"✓ {animal} agregado al {self.corrales[numero_corral]}")
+           return True
         else:
-            print(f"✗ Error: {self.corrales[numero_corral]} está lleno")
-            # Remover de la colección si no se pudo agregar al corral
-            del self.animales[animal.id]
-            return False
+            raise CorralLlenoException(f"{self.corrales[numero_corral]} está lleno")
     
     def remover_animal(self, id_animal: int) -> bool:
         """
@@ -378,6 +374,7 @@ class FeedlotSystem(metaclass=SingletonMeta):
                 f"corrales={len(self.corrales)}, "
                 f"sensores={len(self.sensores)}, "
                 f"activo={self.activo})")
+    
 
 # ================================================================================
 # ARCHIVO 3/6: log_service.py
@@ -650,6 +647,7 @@ Servicio de Persistencia - Guarda y carga el estado del sistema
 Permite guardar el estado completo del feedlot y continuar simulaciones.
 """
 
+from excepciones.feedlot_exceptions import PersistenciaException
 import pickle
 import os
 import csv
@@ -714,10 +712,10 @@ class PersistenciaService:
             print(f"[PERSISTENCIA] ✓ Estado guardado en: {archivo}")
             print(f"[INFO] Día: {sistema.dia_actual}, Animales: {len(sistema.animales)}")
             return True
-            
+        
         except Exception as e:
-            print(f"[ERROR] ✗ No se pudo guardar el estado: {e}")
-            return False
+         print(f"[ERROR] ✗ No se pudo guardar el estado: {e}")
+        raise PersistenciaException(f"Error al guardar estado: {e}")
     
     def cargar_estado(self, archivo: str = None) -> Optional[dict]:
         """
@@ -746,11 +744,12 @@ class PersistenciaService:
             print(f"[INFO] Guardado el: {estado['timestamp_guardado'].strftime('%Y-%m-%d %H:%M:%S')}")
             
             return estado
-            
+
         except Exception as e:
-            print(f"[ERROR] ✗ No se pudo cargar el estado: {e}")
-            return None
-    
+         print(f"[ERROR] ✗ No se pudo cargar el estado: {e}")
+        raise PersistenciaException(f"Error al cargar estado: {e}") 
+
+
     def restaurar_sistema(self, sistema, estado: dict) -> bool:
         """
         Restaura el estado de un sistema desde un diccionario cargado.

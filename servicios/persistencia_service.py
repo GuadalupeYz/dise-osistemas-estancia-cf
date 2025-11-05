@@ -3,6 +3,7 @@ Servicio de Persistencia - Guarda y carga el estado del sistema
 Permite guardar el estado completo del feedlot y continuar simulaciones.
 """
 
+from excepciones.feedlot_exceptions import PersistenciaException
 import pickle
 import os
 import csv
@@ -67,10 +68,10 @@ class PersistenciaService:
             print(f"[PERSISTENCIA] ✓ Estado guardado en: {archivo}")
             print(f"[INFO] Día: {sistema.dia_actual}, Animales: {len(sistema.animales)}")
             return True
-            
+        
         except Exception as e:
-            print(f"[ERROR] ✗ No se pudo guardar el estado: {e}")
-            return False
+         print(f"[ERROR] ✗ No se pudo guardar el estado: {e}")
+        raise PersistenciaException(f"Error al guardar estado: {e}")
     
     def cargar_estado(self, archivo: str = None) -> Optional[dict]:
         """
@@ -99,11 +100,12 @@ class PersistenciaService:
             print(f"[INFO] Guardado el: {estado['timestamp_guardado'].strftime('%Y-%m-%d %H:%M:%S')}")
             
             return estado
-            
+
         except Exception as e:
-            print(f"[ERROR] ✗ No se pudo cargar el estado: {e}")
-            return None
-    
+         print(f"[ERROR] ✗ No se pudo cargar el estado: {e}")
+        raise PersistenciaException(f"Error al cargar estado: {e}") 
+
+
     def restaurar_sistema(self, sistema, estado: dict) -> bool:
         """
         Restaura el estado de un sistema desde un diccionario cargado.

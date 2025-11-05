@@ -1,12 +1,12 @@
 """
 Archivo integrador generado automaticamente
 Directorio: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/.
-Fecha: 2025-11-05 09:19:07
-Total de archivos integrados: 2
+Fecha: 2025-11-05 20:04:58
+Total de archivos integrados: 3
 """
 
 # ================================================================================
-# ARCHIVO 1/2: buscar_paquete.py
+# ARCHIVO 1/3: buscar_paquete.py
 # Ruta: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./buscar_paquete.py
 # ================================================================================
 
@@ -424,7 +424,19 @@ if __name__ == "__main__":
     sys.exit(main())
 
 # ================================================================================
-# ARCHIVO 2/2: main.py
+# ARCHIVO 2/3: constantes.py
+# Ruta: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./constantes.py
+# ================================================================================
+
+
+INTERVALO_SENSOR_PESO = 8.0
+INTERVALO_SENSOR_TEMP = 6.0
+INTERVALO_RACIONES = 10.0
+INTERVALO_REPORTES = 15.0
+INTERVALO_BACKUP = 40.0
+
+# ================================================================================
+# ARCHIVO 3/3: main.py
 # Ruta: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./main.py
 # ================================================================================
 

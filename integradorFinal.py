@@ -2,9 +2,9 @@
 INTEGRADOR FINAL - CONSOLIDACION COMPLETA DEL PROYECTO
 ============================================================================
 Directorio raiz: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/.
-Fecha de generacion: 2025-11-05 09:19:07
-Total de archivos integrados: 23
-Total de directorios procesados: 5
+Fecha de generacion: 2025-11-05 20:04:58
+Total de archivos integrados: 26
+Total de directorios procesados: 6
 ============================================================================
 """
 
@@ -14,36 +14,41 @@ Total de directorios procesados: 5
 
 # DIRECTORIO: .
 #   1. buscar_paquete.py
-#   2. main.py
+#   2. constantes.py
+#   3. main.py
 #
 # DIRECTORIO: entidades
-#   3. __init__.py
-#   4. animal.py
-#   5. corral.py
-#   6. sensor.py
-#   7. veterinario.py
+#   4. __init__.py
+#   5. animal.py
+#   6. corral.py
+#   7. sensor.py
+#   8. veterinario.py
 #
 # DIRECTORIO: estrategias
-#   8. __init__.py
-#   9. estrategia_racion.py
-#   10. racion_intensiva.py
-#   11. racion_mantenimiento.py
-#   12. racion_normal.py
+#   9. __init__.py
+#   10. estrategia_racion.py
+#   11. racion_intensiva.py
+#   12. racion_mantenimiento.py
+#   13. racion_normal.py
+#
+# DIRECTORIO: excepciones
+#   14. __init__.py
+#   15. feedlot_exceptions.py
 #
 # DIRECTORIO: patrones
-#   13. __init__.py
-#   14. factory.py
-#   15. observer.py
-#   16. salud_observer.py
-#   17. singleton.py
+#   16. __init__.py
+#   17. factory.py
+#   18. observer.py
+#   19. salud_observer.py
+#   20. singleton.py
 #
 # DIRECTORIO: servicios
-#   18. __init__.py
-#   19. feedlot_service.py
-#   20. log_service.py
-#   21. persistencia_service.py
-#   22. racion_service.py
-#   23. reporte_service.py
+#   21. __init__.py
+#   22. feedlot_service.py
+#   23. log_service.py
+#   24. persistencia_service.py
+#   25. racion_service.py
+#   26. reporte_service.py
 #
 
 
@@ -53,7 +58,7 @@ Total de directorios procesados: 5
 ################################################################################
 
 # ==============================================================================
-# ARCHIVO 1/23: buscar_paquete.py
+# ARCHIVO 1/26: buscar_paquete.py
 # Directorio: .
 # Ruta completa: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./buscar_paquete.py
 # ==============================================================================
@@ -472,7 +477,20 @@ if __name__ == "__main__":
     sys.exit(main())
 
 # ==============================================================================
-# ARCHIVO 2/23: main.py
+# ARCHIVO 2/26: constantes.py
+# Directorio: .
+# Ruta completa: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./constantes.py
+# ==============================================================================
+
+
+INTERVALO_SENSOR_PESO = 8.0
+INTERVALO_SENSOR_TEMP = 6.0
+INTERVALO_RACIONES = 10.0
+INTERVALO_REPORTES = 15.0
+INTERVALO_BACKUP = 40.0
+
+# ==============================================================================
+# ARCHIVO 3/26: main.py
 # Directorio: .
 # Ruta completa: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./main.py
 # ==============================================================================
@@ -897,7 +915,7 @@ if __name__ == "__main__":
 ################################################################################
 
 # ==============================================================================
-# ARCHIVO 3/23: __init__.py
+# ARCHIVO 4/26: __init__.py
 # Directorio: entidades
 # Ruta completa: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./entidades/__init__.py
 # ==============================================================================
@@ -905,7 +923,7 @@ if __name__ == "__main__":
 
 
 # ==============================================================================
-# ARCHIVO 4/23: animal.py
+# ARCHIVO 5/26: animal.py
 # Directorio: entidades
 # Ruta completa: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./entidades/animal.py
 # ==============================================================================
@@ -1023,7 +1041,7 @@ class Animal:
         return f"Animal(id={self.id}, tipo='{self.tipo}', peso={self.peso:.2f}kg)"
 
 # ==============================================================================
-# ARCHIVO 5/23: corral.py
+# ARCHIVO 6/26: corral.py
 # Directorio: entidades
 # Ruta completa: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./entidades/corral.py
 # ==============================================================================
@@ -1159,7 +1177,7 @@ class Corral:
         return f"Corral(numero={self.numero}, animales={len(self.animales)}/{self.capacidad})"
 
 # ==============================================================================
-# ARCHIVO 6/23: sensor.py
+# ARCHIVO 7/26: sensor.py
 # Directorio: entidades
 # Ruta completa: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./entidades/sensor.py
 # ==============================================================================
@@ -1320,7 +1338,7 @@ class SensorTemperatura(Sensor):
                 )
 
 # ==============================================================================
-# ARCHIVO 7/23: veterinario.py
+# ARCHIVO 8/26: veterinario.py
 # Directorio: entidades
 # Ruta completa: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./entidades/veterinario.py
 # ==============================================================================
@@ -1642,7 +1660,7 @@ class Veterinario:
 ################################################################################
 
 # ==============================================================================
-# ARCHIVO 8/23: __init__.py
+# ARCHIVO 9/26: __init__.py
 # Directorio: estrategias
 # Ruta completa: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./estrategias/__init__.py
 # ==============================================================================
@@ -1650,7 +1668,7 @@ class Veterinario:
 
 
 # ==============================================================================
-# ARCHIVO 9/23: estrategia_racion.py
+# ARCHIVO 10/26: estrategia_racion.py
 # Directorio: estrategias
 # Ruta completa: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./estrategias/estrategia_racion.py
 # ==============================================================================
@@ -1742,7 +1760,7 @@ class EstrategiaRacion(ABC):
         return f"{self.__class__.__name__}()"
 
 # ==============================================================================
-# ARCHIVO 10/23: racion_intensiva.py
+# ARCHIVO 11/26: racion_intensiva.py
 # Directorio: estrategias
 # Ruta completa: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./estrategias/racion_intensiva.py
 # ==============================================================================
@@ -1840,7 +1858,7 @@ class RacionIntensiva(EstrategiaRacion):
         return f"Ración Intensiva (+{self.incremento_base} kg/día) "
 
 # ==============================================================================
-# ARCHIVO 11/23: racion_mantenimiento.py
+# ARCHIVO 12/26: racion_mantenimiento.py
 # Directorio: estrategias
 # Ruta completa: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./estrategias/racion_mantenimiento.py
 # ==============================================================================
@@ -1968,7 +1986,7 @@ class RacionMantenimiento(EstrategiaRacion):
         return f"Ración de Mantenimiento (+{self.incremento_base} kg/día) "
 
 # ==============================================================================
-# ARCHIVO 12/23: racion_normal.py
+# ARCHIVO 13/26: racion_normal.py
 # Directorio: estrategias
 # Ruta completa: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./estrategias/racion_normal.py
 # ==============================================================================
@@ -2045,11 +2063,90 @@ class RacionNormal(EstrategiaRacion):
 
 
 ################################################################################
+# DIRECTORIO: excepciones
+################################################################################
+
+# ==============================================================================
+# ARCHIVO 14/26: __init__.py
+# Directorio: excepciones
+# Ruta completa: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./excepciones/__init__.py
+# ==============================================================================
+
+"""
+Módulo de excepciones personalizadas
+"""
+
+from .feedlot_exceptions import (
+    FeedlotException,
+    AnimalNoEncontradoException,
+    CorralNoEncontradoException,
+    CorralLlenoException,
+    PersistenciaException,
+    EstrategiaInvalidaException,
+    SensorException
+)
+
+__all__ = [
+    'FeedlotException',
+    'AnimalNoEncontradoException',
+    'CorralNoEncontradoException',
+    'CorralLlenoException',
+    'PersistenciaException',
+    'EstrategiaInvalidaException',
+    'SensorException'
+]
+
+# ==============================================================================
+# ARCHIVO 15/26: feedlot_exceptions.py
+# Directorio: excepciones
+# Ruta completa: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./excepciones/feedlot_exceptions.py
+# ==============================================================================
+
+"""
+Excepciones personalizadas del sistema de feedlot
+"""
+
+class FeedlotException(Exception):
+    """Excepción base del sistema de feedlot"""
+    pass
+
+
+class AnimalNoEncontradoException(FeedlotException):
+    """Se lanza cuando un animal no existe en el sistema"""
+    pass
+
+
+class CorralNoEncontradoException(FeedlotException):
+    """Se lanza cuando un corral no existe en el sistema"""
+    pass
+
+
+class CorralLlenoException(FeedlotException):
+    """Se lanza cuando un corral está en capacidad máxima"""
+    pass
+
+
+class PersistenciaException(FeedlotException):
+    """Se lanza cuando hay error al guardar/cargar datos"""
+    pass
+
+
+class EstrategiaInvalidaException(FeedlotException):
+    """Se lanza cuando una estrategia no es válida para el animal"""
+    pass
+
+
+class SensorException(FeedlotException):
+    """Se lanza cuando hay error en los sensores"""
+    pass
+
+
+################################################################################
 # DIRECTORIO: patrones
 ################################################################################
 
 # ==============================================================================
-# ARCHIVO 13/23: __init__.py
+# ARCHIVO 16/26: __init__.py
 # Directorio: patrones
 # Ruta completa: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./patrones/__init__.py
 # ==============================================================================
@@ -2057,7 +2154,7 @@ class RacionNormal(EstrategiaRacion):
 
 
 # ==============================================================================
-# ARCHIVO 14/23: factory.py
+# ARCHIVO 17/26: factory.py
 # Directorio: patrones
 # Ruta completa: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./patrones/factory.py
 # ==============================================================================
@@ -2071,6 +2168,7 @@ from entidades.animal import Animal
 from entidades.sensor import SensorPeso, SensorTemperatura
 from typing import Tuple, List
 import random
+from excepciones.feedlot_exceptions import FeedlotException
 
 class AnimalFactory:
     """
@@ -2106,10 +2204,7 @@ class AnimalFactory:
         """
         if tipo not in AnimalFactory.TIPOS_CONFIG:
             tipos_validos = ", ".join(AnimalFactory.TIPOS_CONFIG.keys())
-            raise ValueError(
-                f"Tipo de animal no válido: '{tipo}'. "
-                f"Tipos válidos: {tipos_validos}"
-            )
+            raise FeedlotException(f"Tipo de animal no válido: '{tipo}'. Tipos válidos: {tipos_validos}")
         
         # Si no se especifica peso, usar valor aleatorio del rango
         if peso_inicial is None:
@@ -2229,7 +2324,7 @@ class AnimalFactory:
         return None
 
 # ==============================================================================
-# ARCHIVO 15/23: observer.py
+# ARCHIVO 18/26: observer.py
 # Directorio: patrones
 # Ruta completa: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./patrones/observer.py
 # ==============================================================================
@@ -2449,7 +2544,7 @@ class ObservadorAlerta(Observador):
             print(f" Error al exportar alertas: {e}")
 
 # ==============================================================================
-# ARCHIVO 16/23: salud_observer.py
+# ARCHIVO 19/26: salud_observer.py
 # Directorio: patrones
 # Ruta completa: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./patrones/salud_observer.py
 # ==============================================================================
@@ -2784,7 +2879,7 @@ class SaludObserver(Observador):
         return f"SaludObserver(alertas={len(self.alertas_salud)}, tratamientos={len(self.animales_en_tratamiento)})"
 
 # ==============================================================================
-# ARCHIVO 17/23: singleton.py
+# ARCHIVO 20/26: singleton.py
 # Directorio: patrones
 # Ruta completa: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./patrones/singleton.py
 # ==============================================================================
@@ -2847,7 +2942,7 @@ class SingletonMeta(type):
 ################################################################################
 
 # ==============================================================================
-# ARCHIVO 18/23: __init__.py
+# ARCHIVO 21/26: __init__.py
 # Directorio: servicios
 # Ruta completa: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./servicios/__init__.py
 # ==============================================================================
@@ -2855,7 +2950,7 @@ class SingletonMeta(type):
 
 
 # ==============================================================================
-# ARCHIVO 19/23: feedlot_service.py
+# ARCHIVO 22/26: feedlot_service.py
 # Directorio: servicios
 # Ruta completa: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./servicios/feedlot_service.py
 # ==============================================================================
@@ -2875,6 +2970,10 @@ from patrones.observer import ObservadorAlerta
 from estrategias.estrategia_racion import EstrategiaRacion
 from estrategias.racion_normal import RacionNormal
 import time
+from excepciones.feedlot_exceptions import (
+    AnimalNoEncontradoException,
+    CorralLlenoException
+)
 
 class FeedlotSystem(metaclass=SingletonMeta):
     """
@@ -2929,28 +3028,20 @@ class FeedlotSystem(metaclass=SingletonMeta):
         Returns:
             bool: True si se agregó exitosamente
         """
-        # Verificar que el animal no exista
+    
         if animal.id in self.animales:
-            print(f" Animal #{animal.id} ya existe en el sistema")
-            return False
-        
-        # Agregar a la colección de animales
+           raise AnimalNoEncontradoException(f"Animal #{animal.id} ya existe en el sistema")
+    
         self.animales[animal.id] = animal
-        
-        # Crear corral si no existe
+    
         if numero_corral not in self.corrales:
-            self.corrales[numero_corral] = Corral(numero_corral)
-            print(f"✓ Corral #{numero_corral} creado")
-        
-        # Agregar animal al corral
+           self.corrales[numero_corral] = Corral(numero_corral)
+  
         if self.corrales[numero_corral].agregar_animal(animal):
-            print(f"✓ {animal} agregado al {self.corrales[numero_corral]}")
-            return True
+           print(f"✓ {animal} agregado al {self.corrales[numero_corral]}")
+           return True
         else:
-            print(f"✗ Error: {self.corrales[numero_corral]} está lleno")
-            # Remover de la colección si no se pudo agregar al corral
-            del self.animales[animal.id]
-            return False
+            raise CorralLlenoException(f"{self.corrales[numero_corral]} está lleno")
     
     def remover_animal(self, id_animal: int) -> bool:
         """
@@ -3221,9 +3312,10 @@ class FeedlotSystem(metaclass=SingletonMeta):
                 f"corrales={len(self.corrales)}, "
                 f"sensores={len(self.sensores)}, "
                 f"activo={self.activo})")
+    
 
 # ==============================================================================
-# ARCHIVO 20/23: log_service.py
+# ARCHIVO 23/26: log_service.py
 # Directorio: servicios
 # Ruta completa: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./servicios/log_service.py
 # ==============================================================================
@@ -3485,7 +3577,7 @@ class LogService:
         return f"LogService(archivo={self.archivo})"
 
 # ==============================================================================
-# ARCHIVO 21/23: persistencia_service.py
+# ARCHIVO 24/26: persistencia_service.py
 # Directorio: servicios
 # Ruta completa: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./servicios/persistencia_service.py
 # ==============================================================================
@@ -3495,6 +3587,7 @@ Servicio de Persistencia - Guarda y carga el estado del sistema
 Permite guardar el estado completo del feedlot y continuar simulaciones.
 """
 
+from excepciones.feedlot_exceptions import PersistenciaException
 import pickle
 import os
 import csv
@@ -3559,10 +3652,10 @@ class PersistenciaService:
             print(f"[PERSISTENCIA] ✓ Estado guardado en: {archivo}")
             print(f"[INFO] Día: {sistema.dia_actual}, Animales: {len(sistema.animales)}")
             return True
-            
+        
         except Exception as e:
-            print(f"[ERROR] ✗ No se pudo guardar el estado: {e}")
-            return False
+         print(f"[ERROR] ✗ No se pudo guardar el estado: {e}")
+        raise PersistenciaException(f"Error al guardar estado: {e}")
     
     def cargar_estado(self, archivo: str = None) -> Optional[dict]:
         """
@@ -3591,11 +3684,12 @@ class PersistenciaService:
             print(f"[INFO] Guardado el: {estado['timestamp_guardado'].strftime('%Y-%m-%d %H:%M:%S')}")
             
             return estado
-            
+
         except Exception as e:
-            print(f"[ERROR] ✗ No se pudo cargar el estado: {e}")
-            return None
-    
+         print(f"[ERROR] ✗ No se pudo cargar el estado: {e}")
+        raise PersistenciaException(f"Error al cargar estado: {e}") 
+
+
     def restaurar_sistema(self, sistema, estado: dict) -> bool:
         """
         Restaura el estado de un sistema desde un diccionario cargado.
@@ -3784,7 +3878,7 @@ class PersistenciaService:
         return "PersistenciaService(carpetas: data, reportes_csv, backups)"
 
 # ==============================================================================
-# ARCHIVO 22/23: racion_service.py
+# ARCHIVO 25/26: racion_service.py
 # Directorio: servicios
 # Ruta completa: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./servicios/racion_service.py
 # ==============================================================================
@@ -4053,7 +4147,7 @@ class RacionService:
         return f"RacionService(animales={len(self.estrategias)}, activo={self.activo})"
 
 # ==============================================================================
-# ARCHIVO 23/23: reporte_service.py
+# ARCHIVO 26/26: reporte_service.py
 # Directorio: servicios
 # Ruta completa: /home/guadalupe/Documentos/DiseñoSistemas/tp2/dise-osistemas-estancia-cf/./servicios/reporte_service.py
 # ==============================================================================
@@ -4388,6 +4482,6 @@ class ReporteService:
 
 ################################################################################
 # FIN DEL INTEGRADOR FINAL
-# Total de archivos: 23
-# Generado: 2025-11-05 09:19:07
+# Total de archivos: 26
+# Generado: 2025-11-05 20:04:58
 ################################################################################

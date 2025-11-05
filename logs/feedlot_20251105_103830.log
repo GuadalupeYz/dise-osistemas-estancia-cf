@@ -1,0 +1,91 @@
+================================================================================
+ESTANCIA CARNES FINAS - BITÁCORA DE EVENTOS
+================================================================================
+Inicio de sesión: 2025-11-05 10:38:30
+================================================================================
+
+[10:38:30.342] [OK] Sistema iniciado
+
+--------------------------------------------------------------------------------
+  CONFIGURACIÓN DEL FEEDLOT
+--------------------------------------------------------------------------------
+
+[10:38:30.344] [INFO] Animal 1 (Ternero) creado - Peso: 180.0 kg
+[10:38:30.345] [INFO] Animal 2 (Novillo) creado - Peso: 280.0 kg
+[10:38:30.345] [INFO] Animal 3 (Novillo) creado - Peso: 300.0 kg
+[10:38:30.346] [INFO] Animal 4 (Toro) creado - Peso: 450.0 kg
+[10:38:30.346] [INFO] Animal 5 (Ternero) creado - Peso: 200.0 kg
+[10:38:30.347] [INFO] Veterinario Dra. María González incorporado
+[10:38:30.347] [INFO] Estrategias de alimentación configuradas
+[10:38:30.350] [ALERTA] ALERTA BAJO_RENDIMIENTO - Animal #1 (Ternero): 38.0957229062485
+[10:38:30.351] [ALERTA] ALERTA BAJO_RENDIMIENTO - Animal #2 (Novillo): 38.5
+[10:38:30.353] [WARNING] Bajo rendimiento detectado - Animal #1
+[10:38:30.357] [WARNING] Cambio de estado - Animal #1: Saludable → Bajo observación
+[10:38:30.357] [WARNING] Bajo rendimiento detectado - Animal #2
+[10:38:30.358] [WARNING] Cambio de estado - Animal #2: Saludable → Bajo observación
+[10:38:30.361] [ALERTA] ALERTA BAJO_RENDIMIENTO - Animal #5 (Ternero): 38.224237662902304
+[10:38:30.362] [WARNING] Bajo rendimiento detectado - Animal #5
+[10:38:30.363] [OK] Sistema iniciado - 5 animales, 10 sensores
+[10:38:30.364] [WARNING] Cambio de estado - Animal #5: Saludable → Bajo observación
+[10:38:36.360] [ALERTA] ALERTA FIEBRE - Animal #4 (Toro): 39.69908457585811
+[10:38:36.361] [OK] Tratamiento de fiebre iniciado - Animal #4
+[10:38:46.359] [ALERTA] ALERTA BAJO_RENDIMIENTO - Animal #4 (Toro): 38.74746890382828
+[10:38:46.360] [WARNING] Bajo rendimiento detectado - Animal #4
+[10:38:46.360] [WARNING] Cambio de estado - Animal #4: Saludable → Bajo observación
+[10:38:46.365] [ALERTA] ALERTA BAJO_RENDIMIENTO - Animal #5 (Ternero): 38.0607548204274
+[10:38:46.366] [WARNING] Bajo rendimiento detectado - Animal #5
+[10:38:46.366] [WARNING] Cambio de estado - Animal #5: Saludable → Bajo observación
+[10:38:48.358] [ALERTA] ALERTA FIEBRE - Animal #3 (Novillo): 39.83448716105916
+[10:38:48.358] [OK] Tratamiento de fiebre iniciado - Animal #3
+[10:38:54.359] [ALERTA] ALERTA BAJO_RENDIMIENTO - Animal #3 (Novillo): 38.78710706096427
+[10:38:54.360] [WARNING] Bajo rendimiento detectado - Animal #3
+[10:38:54.360] [WARNING] Cambio de estado - Animal #3: Saludable → Bajo observación
+[10:38:54.360] [ALERTA] ALERTA BAJO_RENDIMIENTO - Animal #4 (Toro): 38.66856703419648
+[10:38:54.361] [WARNING] Bajo rendimiento detectado - Animal #4
+[10:38:54.361] [WARNING] Cambio de estado - Animal #4: Saludable → Bajo observación
+[10:38:54.362] [ALERTA] ALERTA FIEBRE - Animal #5 (Ternero): 39.63759542893961
+[10:38:54.363] [OK] Tratamiento de fiebre iniciado - Animal #5
+[10:39:00.357] [ALERTA] ALERTA FIEBRE - Animal #2 (Novillo): 39.565081643791366
+[10:39:00.357] [OK] Tratamiento de fiebre iniciado - Animal #2
+[10:39:06.360] [ALERTA] ALERTA FIEBRE - Animal #3 (Novillo): 39.69080533500944
+[10:39:06.360] [OK] Tratamiento de fiebre iniciado - Animal #3
+[10:39:06.362] [ALERTA] ALERTA FIEBRE - Animal #4 (Toro): 39.597745129452385
+[10:39:06.363] [OK] Tratamiento de fiebre iniciado - Animal #4
+[10:39:06.364] [ALERTA] ALERTA FIEBRE - Animal #5 (Ternero): 39.7142462570835
+[10:39:06.364] [OK] Tratamiento de fiebre iniciado - Animal #5
+[10:39:10.361] [ALERTA] ALERTA BAJO_RENDIMIENTO - Animal #3 (Novillo): 39.69080533500944
+[10:39:10.361] [WARNING] Bajo rendimiento detectado - Animal #3
+[10:39:10.362] [ALERTA] ALERTA BAJO_RENDIMIENTO - Animal #4 (Toro): 39.597745129452385
+[10:39:10.362] [WARNING] Bajo rendimiento detectado - Animal #4
+[10:39:10.376] [PERSISTENCIA] Backup automático creado
+[10:39:12.353] [ALERTA] ALERTA FIEBRE - Animal #1 (Ternero): 39.6257536194639
+[10:39:12.353] [OK] Tratamiento de fiebre iniciado - Animal #1
+[10:39:18.360] [ALERTA] ALERTA BAJO_RENDIMIENTO - Animal #1 (Ternero): 39.05035569444874
+[10:39:18.360] [WARNING] Bajo rendimiento detectado - Animal #1
+[10:39:18.360] [WARNING] Cambio de estado - Animal #1: Saludable → Bajo observación
+[10:39:24.366] [ALERTA] ALERTA FIEBRE - Animal #5 (Ternero): 39.80104532759485
+[10:39:24.366] [OK] Tratamiento de fiebre iniciado - Animal #5
+[10:39:26.361] [ALERTA] ALERTA BAJO_RENDIMIENTO - Animal #2 (Novillo): 38.68531093383007
+[10:39:26.363] [WARNING] Bajo rendimiento detectado - Animal #2
+[10:39:26.363] [WARNING] Cambio de estado - Animal #2: Saludable → Bajo observación
+[10:39:26.365] [ALERTA] ALERTA BAJO_RENDIMIENTO - Animal #3 (Novillo): 38.615591636464536
+[10:39:26.366] [WARNING] Bajo rendimiento detectado - Animal #3
+[10:39:26.367] [WARNING] Cambio de estado - Animal #3: Saludable → Bajo observación
+[10:39:30.362] [ALERTA] ALERTA FIEBRE - Animal #3 (Novillo): 39.54711333999833
+[10:39:30.362] [OK] Tratamiento de fiebre iniciado - Animal #3
+[10:39:30.364] [ALERTA] ALERTA FIEBRE - Animal #4 (Toro): 39.74499196213883
+[10:39:30.364] [OK] Tratamiento de fiebre iniciado - Animal #4
+[10:39:30.382] [OK] Simulación completada - 60s
+[10:39:36.360] [ALERTA] ALERTA FIEBRE - Animal #2 (Novillo): 39.650028707815494
+[10:39:36.360] [OK] Tratamiento de fiebre iniciado - Animal #2
+[10:39:36.363] [ALERTA] ALERTA FIEBRE - Animal #3 (Novillo): 39.87373562683737
+[10:39:36.363] [OK] Tratamiento de fiebre iniciado - Animal #3
+[10:39:36.365] [ALERTA] ALERTA FIEBRE - Animal #4 (Toro): 39.751907459629514
+[10:39:36.365] [OK] Tratamiento de fiebre iniciado - Animal #4
+[10:39:36.367] [ALERTA] ALERTA FIEBRE - Animal #5 (Ternero): 39.618966303622805
+[10:39:36.368] [OK] Tratamiento de fiebre iniciado - Animal #5
+[10:39:49.376] [OK] Sistema detenido - Día 5, Ganancia total: 93.03 kg
+
+================================================================================
+Fin de sesión: 2025-11-05 10:39:49
+================================================================================

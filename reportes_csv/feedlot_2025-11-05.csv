@@ -1,6 +1,6 @@
 ID,Tipo,Peso_Actual_kg,Peso_Inicial_kg,Ganancia_kg,GDP_kg_dia,Temperatura_C,Estado_Salud,Racion_Actual,Dias_Feedlot
-1,Ternero,194.33,180.0,14.33,4.78,38.1,Saludable,Intensiva,0
-2,Novillo,286.18,280.0,6.18,2.06,38.5,Saludable,Mantenimiento,0
-3,Novillo,305.11,300.0,5.11,1.7,39.3,Saludable,Mantenimiento,0
-4,Toro,458.69,450.0,8.69,2.9,39.4,Saludable,Mantenimiento,0
-5,Ternero,216.51,200.0,16.51,5.5,39.4,Saludable,Intensiva,0
+1,Ternero,212.76,180.0,32.76,4.68,38.5,Saludable,Intensiva,0
+2,Novillo,312.89,280.0,32.89,4.7,39.5,En tratamiento - Fiebre,Intensiva,0
+3,Novillo,317.86,300.0,17.86,2.55,39.1,Saludable,Mantenimiento,0
+4,Toro,464.78,450.0,14.78,2.11,38.4,Saludable,Mantenimiento,0
+5,Ternero,235.85,200.0,35.85,5.12,39.9,En tratamiento - Fiebre,Intensiva,0
